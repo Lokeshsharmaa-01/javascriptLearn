@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start and Stop</title>
+</head>
+<body>
+    <h1>code with me</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const randomColor = function(){
+        const hex = "0123456789ABCDEF"
+        let color = '#'
+        for(let i = 0; i<6; i++){
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+    }
+    
+    let interver
+    const StartchangingColor = function(){
+        interver = setInterval(changebg,1000)
+        function changebg() {
+            document.body.style.backgroundColor = randomColor()
+        };
+    }
+    const StopchangingColor = function(){
+        clearInterval(interver)
+    }
+    document.querySelector('#start').addEventListener('click',StartchangingColor)
+    document.querySelector('#stop').addEventListener('click',StopchangingColor)
+    
+
+</script>
+</html>

@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <style>
+        .day{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 2px;
+            text-align: center;
+            
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 id="title">Hello Gojo To Sukuna</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+    <div class="parent">
+        <div class="day" id="one">Monday</div>
+        <div class="day" id="two">Tuesday</div>
+        <div class="day" id="three">Wednesday</div>
+        <div class="day" id="four">Thursday</div>
     </div>
 </body>
+<script>
+    // document.getElementById('one').addEventListener('click', function (e){
+    //     alert("lets goooooooo")
+    // })
+
+        document.querySelector('.parent').addEventListener('click', function(e){
+            console.log(e.target.parentNode)
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        })
+
+</script>
 </html>
