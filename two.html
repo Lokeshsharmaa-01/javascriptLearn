@@ -7,17 +7,14 @@
 </head>
 <body>
     <h1>code learn with me</h1>
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
 
-    let changeName = function(){
-        document.querySelector('h1').innerHTML = "lets goooo!"
-    }
-    const notchange =  setTimeout(changeName,2000)
-    document.querySelector('#stop').addEventListener('click',function (){
-        clearTimeout(notchange)
-        console.log("rok diya")
+    const sayMy =  document.querySelector('#start').addEventListener('click',()=>{
+        setInterval(console.log("Hello ji"),1000)
     })
+
 </script>
 </html>

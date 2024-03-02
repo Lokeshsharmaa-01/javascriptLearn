@@ -29,6 +29,7 @@
     }
     const StopchangingColor = function(){
         clearInterval(interver)
+        interver = null
     }
     document.querySelector('#start').addEventListener('click',StartchangingColor)
     document.querySelector('#stop').addEventListener('click',StopchangingColor)
